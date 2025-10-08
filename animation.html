@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta  name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+
+@keyframes rotating{
+	from{rotate:0deg}
+	to{rotate:360deg}
+}
+
+
+.d1{
+width:520px;
+height:520px;
+border-radius:50%;
+box-shadow:0 0 10px black;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:auto;
+}
+.d2{
+width:450px;
+height:450px;
+border:30px solid white;
+border-top:30px solid green;
+border-bottom:30px solid red;
+border-left:30px solid yellow;
+border-right:30px solid blue;
+display:flex;
+box-shadow:0 0 3px black;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+animation:rotating 1s linear infinite;
+}
+
+.d3{
+width:400px;
+height:400px;
+border-radius:50%;
+background:radial-gradient(circle,#FC466B 20%, #3F5EFB 70%);
+box-shadow:0 0 25px black;
+}
+
+</style>
+</head>
+<body>
+<div class="d1">
+<div class="d2">
+<div class="d3"></div>
+</div>
+</div>
+</body>
+
+</html>

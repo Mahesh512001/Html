@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Column-task</title>
+
+<script>
+let n = 5;
+for(let i= 0;i<n;i++){
+for(let j= i;j<n;j++){
+document.write("*");
+}
+document.writeln("<br>");
+}
+document.writeln("<br>=============================================<br><br>");
+for(let i= 0;i<n;i++){
+for(let j= 0;j<=i;j++){
+document.write("*");
+}
+document.writeln("<br>");
+}
+document.writeln("<br>=============================================<br><br>");
+for(let i= 0;i<n;i++){
+for(let j= 0;j<=2*(n-i);j++){
+document.write("&nbsp;");
+}
+for(let k= 0;k<=2*i;k++){
+document.write("*");
+}
+document.writeln("<br>");
+}
+for(let i= 1;i<n;i++){
+for(let j= 0;j<=2*(i+1);j++){
+document.write("&nbsp;");
+}
+for(let k= 0;k<=2*(n-i-1);k++){
+document.write("*");
+}
+document.writeln("<br>");
+}
+
+
+document.writeln("<br>=============================================<br><br>");
+for(let i= 0;i<n;i++){
+for(let j= 1;j<=2*i+1;j++){
+ document.write("*");
+}
+document.writeln("<br>");
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>
