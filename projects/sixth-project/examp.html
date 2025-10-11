@@ -1,0 +1,55 @@
+<!-- here container is parent-->
+<div class="container">
+<div>
+  <h2>mahesh</h2><!--childs-->
+   <h2>mahesh</h2>
+   <h2>mahesh</h2>
+   <h2>mahesh</h2>
+   <h2>mahesh</h2>
+<div>
+</div>
+<h2>mahesh</h2>
+<div id="mahesh"></div>
+<br>
+  <span>maehsh</span>
+
+  <input type="text">
+<style>
+/* class selector using (.) key */
+.container div{
+width:300px;
+height:auto;
+ & h2:hover{
+	color: hotpink;
+}
+border:1px solid black;
+background:blue;
+}
+/* this is inline tag we can't give directly css because his width are depndent on content selector using  key (here we can dirclty write the tag-name and give css properties */
+span{
+width:50px;
+  height:30px;
+ background:green;
+}
+/* id selector here we can access using (#) keyword */
+#mahesh{
+width:50px;
+  height:30px;
+ background:hotpink;
+}
+/* pseudo class here first [parent(selector)]  [tag]:predefined keywords {properties:vlaue;} */
+.container h2:focus{
+  background-color:yellow;
+}
+
+input{
+
+}
+input:focus{
+
+}
+
+
+
+</style>
+

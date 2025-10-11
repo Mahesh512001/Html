@@ -1,0 +1,14 @@
+<button onclick="timeDate()">click Here</button>
+
+<script>
+function timeDate(){
+setInterval(() => {
+let d = new Date();
+let hour  = d.getHours();
+let minute = d.getMinutes();
+let second = d.getSeconds();
+
+document.body.innerHTML = `<h2>${hour} : ${minute} : ${second}</h2>`;
+},1000)
+}
+</script>

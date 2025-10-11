@@ -1,0 +1,48 @@
+.heading{
+	height:40px;
+	text-align:center;
+	background:grey;
+}
+.car-details{
+	width:((100/4)-2)%;
+	background:url(image.avif) no-repeat;	
+}
+
+.box{
+	text-shadow: h-shadow v-shadow  black;
+	display:inline-block;
+	background:blue;
+	border:1px solid white;
+	padding:5px;
+	color:white;
+	
+	font-weight:bold;
+	border-radius:5px;
+}
+i{
+	width:20px;
+	color:white;
+}
+.features{
+	display:flex;
+	width:((100/4)-2)%;
+}
+.feature{
+	width:100px;
+	color:white;
+	font-weight:bold;
+	padding:14px;
+	
+}
+.search{
+	height:40px;
+	text-align:center;
+	align-items:center;
+	& input{
+		width:50%;
+		margin:20px;
+		padding:10px 40px;
+		font-size:20px;
+		border-radius:30px;
+	}
+}
