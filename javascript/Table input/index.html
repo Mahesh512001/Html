@@ -1,1 +1,50 @@
-mahesh
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplication Table</title>
+</head>
+<body>
+
+<h2>Multiplication Table</h2>
+<input type="number" id="num1" placeholder="Start">
+<input type="number" id="num2" placeholder="End">
+<button id="btn" onclick="getResult()">Click here</button>
+<output id="out"></output>
+
+<script>
+function getResult() {
+    let start = +document.getElementById("num1").value;
+    let end = +document.getElementById("num2").value;
+    let output = document.getElementById("out");
+
+    // Clear previous output
+    output.innerHTML = '';
+
+    // Create a table to display all multiplication results horizontally
+    let tableHTML = `<table border="1" cellspacing=4 cellpadding=5><thead><tr>`;
+
+    // Add headers for each column
+    for (let i = start; i <= end; i++) {
+        tableHTML += `<th>Table of ${i}</th>`;
+    }
+    tableHTML += `</tr></thead><tbody><tr>`;
+
+    // Add each multiplication row (1 to 10) horizontally
+    for (let j = 1; j <= 10; j++) {
+        for (let i = start; i <= end; i++) {
+            tableHTML += `<td>${i} x ${j} = ${i * j}</td>`;
+        }
+        tableHTML += `</tr>`;
+    }
+
+    tableHTML += `</tbody></table>`;
+
+    // Append the table to the output section
+    output.innerHTML = tableHTML;
+}
+</script>
+
+</body>
+</html>
