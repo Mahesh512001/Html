@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>show/hide password</title>
+</head>
+<body>
+<h3>Password set</h3>
+<form id ="formSubmit">
+<label for="pw">password :  &nbsp; &nbsp; &nbsp; &nbsp; <input id="pw" type="password"  placeholder="Enter the password"></label>
+
+<br> 
+<input id="cb" type="checkbox" onchange="showpas()">
+<label id="lcb" for="cb">Show Password</label>
+
+
+<br><br>
+
+<label for="cpw">Confirm password : <input id="cpw" type="password"  placeholder="confirm the password"></label>
+
+<button  type="submit" id="sub">Submit</button>
+
+</form>
+<script>
+
+function showpas(){
+var pw = document.getElementById("pw");
+var lcb = document.getElementById("lcb");
+var cb = document.getElementById("cb");
+ if(cb.checked){
+ 	pw.type="text";
+	 lcb.textContent="Hide password";
+ }else{
+ pw.type="password";
+ lcb.textContent="Show password";
+ }
+}
+
+document.getElementById("formSubmit").addEventListener('submit',function(event){
+event.preventDefault();
+var pw = document.getElementById("pw").value;
+var cpw = document.getElementById("cpw").value;
+
+if(pw === cpw){
+	alert("your password is created!");
+}else{
+	alert("passowrd is not matched");
+	document.getElementById("pw").value="";
+    document.getElementById("cpw").value="";
+	document.getElementById("pw").focus();
+}
+});
+
+
+</script>
+</body>
+</html>

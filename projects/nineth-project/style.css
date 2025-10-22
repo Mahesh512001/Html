@@ -1,0 +1,12 @@
+.item{
+	width: 25%;
+	box-shadow:0 0 5px grey;
+	border-radius:5px;
+	display:grid;
+	justify-content:center;
+	align-items:center;
+	padding: 10px 0;
+
+}
+img{
+width:60%;}

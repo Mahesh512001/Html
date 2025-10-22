@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+
+.container {
+  width: 300px;
+  height: 300px;
+  background: url("https://images.unsplash.com/photo-1637652593355-5d4005897340?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tJTIwaW1hZ2VzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 0.5; }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: grid;
+  place-content: center;
+  background: black;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1s ease-out;
+}
+
+.container:hover .overlay {
+  opacity: 0.5;
+  h2{
+  opacity:1;
+  color:white;
+  }
+  animation: fadein 1s;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="overlay">
+    <h2>Text On Hover</h2>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+<input type="text" id="first-num" placeholder="write the first number">
+<input type="text" id="second-num" placeholder="wirte the second number">
+<button id="btn">click me </button>
+<script>
+const first = document.getElementById("first-num");
+const second = document.getElementById("second-num");
+const btn = document.getElementById("btn");
+btn.addEventListener("click",function(){
+let result = +first.value + +second.value;
+alert(`the sum is ${result}`);
+});
+
+</script>
+</body>
+
+</html>

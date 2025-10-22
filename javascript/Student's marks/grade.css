@@ -1,0 +1,39 @@
+	.container{
+	width:350px;
+	padding:10px;
+	margin:auto;
+	background:black;
+
+	}
+	input{
+	 width:60%;
+	 padding:5px 7px;
+	 margin:5px;
+ outline:none;
+ border:none;
+ border-bottom:2px solid yellow;
+ border-radius:10px;
+
+ 
+}
+label{
+display: inline-block;
+width:30%;
+ color:white;
+  margin:5px;
+}
+.btn{
+margin:20px;
+    width: 90px;
+    margin-left: 36%;
+
+
+}
+.out{
+display:inline-block;
+width:90%;
+padding:10px;
+text-align:end;
+color:yellow;
+
+}

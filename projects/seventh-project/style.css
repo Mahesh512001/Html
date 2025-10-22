@@ -1,0 +1,38 @@
+
+
+th{
+	padding:20px 40px;	
+}
+
+table th:nth-child(1){
+	background:#f0e9e6;
+}
+
+table th:nth-child(2){
+	background:green;
+}
+table td:nth-child(2){
+	padding: 5px 60px;
+}
+table th:nth-child(3){
+	background:#e35a10;
+}
+table td:nth-child(3){
+	padding: 5px 60px;
+}
+table th:nth-child(4),table th:nth-child(6){
+	background:#f0e9e6;
+}
+table td:nth-child(4){
+	padding: 5px 60px;
+}
+table th:nth-child(5){
+	background:#f22760;
+}
+td{
+	padding: 10px 40px;
+	
+}
+div{
+	border:3px solid grey;
+}

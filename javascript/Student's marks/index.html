@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Student result</title>
+<link rel="stylesheet" href="grade.css"
+</head>
+<body>
+<h2 align="center">Student marks</h2>
+<div class="container">
+
+<label for="rno">Rooll NO.</label><input type="text" id="rno" oninput="toggle()">
+<label for="sna">Name</label><input type="text" id="sna" oninput="toggle()">
+<h2 style="color:white;">Marks</h2>
+<label for="htm">HTML</label><input type="number" id="htm" oninput="toggle()">
+<label for="css">CSS</label><input type="number" id="css"oninput="toggle()">
+<label for="js">Javascript</label><input type="number" id="js" oninput="toggle()">
+<label for="bs">Bootstrap</label><input type="number" id="bs" oninput="toggle()">
+<button class="btn" id="submit" onclick="getResult()" disabled >Get Result</button>
+<output class="out" id="tot"></output>
+<output class="out" id="average"></output>
+<output class="out" id="grd"></output>
+
+</div>
+
+<script src="grade.js"></script>
+</body>
+</html>
