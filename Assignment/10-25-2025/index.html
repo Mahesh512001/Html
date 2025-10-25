@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="Width=device-width,initial-scale=1.0">
+<title>BioData</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="user-input">
+<div>
+<form>
+<label for="iname">Item Name : </label><input type="text" placeholder="Enter the item name" oninput="toggle()" required id="iname">
+</div>
+
+<div>
+<label for="qty">Quantity : </label><input type="number" min="1" placeholder="Enter the Quantity item" oninput="toggle()" required id="qty">
+</div>
+
+<div>
+<label for="tip">Tip : </label><input type="number" placeholder="Enter the Tip ammount" value='0' oninput="toggle()" id="tip">
+</div>
+
+<div>
+<button id="btn" disabled>GET BILL</button>
+</div>
+</form>
+<button onclick="newbill()" > New Bill </button>
+<div class="output" >
+<output id="itename">Mahesh</output>
+<output id="iprice">Mahesh</output>
+<output id="tipamt">Mahesh</output>
+<output id="GST">Mahesh</output>
+<output id="total">Mahesh</output>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

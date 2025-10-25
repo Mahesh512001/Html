@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="Width=device-width,initial-scale=1.0">
+<title>BioData</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+<header>
+<h1><a href="#" class="logo">My PDF App</a></h1>
+ <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#form">Form</a></li>
+        <li><a href="#preview">Preview</a></li>
+        <li><a href="#drive">Google Drive</a></li>
+      </ul>
+    </nav>
+
+<article id="about">
+ <h2>About This Website</h2>
+<ol>
+ 
+  <li>
+		Welcome to our simple and free PDF generator! This tool allows you to enter your own information directly into a web form, then instantly create a personalized PDF — all right in your browser. There’s no need for any downloads, logins, or extra software.
+	  </li>
+
+	  <li>
+		Once your PDF is ready, you can choose to save it to your own Google Drive for safekeeping or easy sharing. We use only free and secure browser-based tools such as <strong>jsPDF</strong> and the <strong>Google Drive API</strong>, which means your files are processed safely and stay within your own Google account.
+	  </li>
+
+	  <li>
+		Our goal is to make PDF creation quick, simple, and accessible to everyone. Whether you need to generate invoices, certificates, reports, or personal documents, this tool gives you full control — all at no cost.
+	  </li>
+
+	  <li>
+		Try it out now by filling in the form above, clicking the <strong>Generate PDF</strong> button, and watching your data transform into a downloadable document in seconds!
+	  </li>
+	  </ol>
+	</article>
+	</header>
+
+	<main>
+	<button>CREATE</button>
+	<button>Edit</button>
+	<button>Delete</button>
+	<!-- Popup Modal (hidden initially) -->
+<div id="popupForm" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <section id="userData">
+      <h2>Fill Your Biodata</h2>
+
+      <form id="biodataForm">
+        <div>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="First-name" name="First-name" placeholder="Enter first name" required>
+          <input type="text" id="last-name" name="last-name" placeholder="Enter last name" required>
+        </div>
+        <div>
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        <div>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" required></textarea>
+        </div>
+        <div>
+          <label for="education">Education:</label>
+          <input type="text" id="education" name="education" required>
+        </div>
+        <div>
+          <label for="skills">Skills:</label>
+          <input type="text" id="skills" name="skills" required>
+        </div>
+        <div>
+          <label for="experience">Work Experience:</label>
+          <textarea id="experience" name="experience"></textarea>
+        </div>
+        <div>
+          <label for="contact">Contact Number:</label>
+          <input type="tel" id="contact" name="contact" required>
+        </div>
+        <div>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <button type="submit">Generate Biodata PDF</button>
+      </form>
+    </section>
+  </div>
+</div>
+
+	</main>
+</body>
+</html>
