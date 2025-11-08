@@ -1,0 +1,99 @@
+<!-- data validation using regular expressions -->
+<!DOCTYPE html>
+<html>
+  <head>  
+   <title>Registration Page</title>
+   <style>
+	  span{ color:#ff0000; } 
+   </style>
+  </head>
+  <body>
+	<div>
+	  <h2 id="head1"> <u>Registration Form</u> </h2>
+	  <form id="f1" action="register.html" method="post">
+		<label for="fna">Fullname</label> <br>
+		<input type="text" id="fna" name="fna"> <br> 
+		<span id="errfna"></span>
+		<br>
+		<label for="pwd">Password</label> <br>
+		<input type="password" id="pwd" name="pwd">  <br>
+		<span id="errpwd"></span>
+		<br> 
+		<label for="em">EmailId</label> <br>
+		<input type="email" id="em" name="em" >
+		<br>
+	    <label for="ph">Contact number</label> <br>
+		<input type="text" id="ph" name="ph"> 
+		<span id="errph"></span>
+		<br>
+		<label for="pin">PinCode</label> <br>
+		<input type="text" id="pin" name="pin">
+		<span id="errpin"></span>
+		<br>
+		<button type="submit" id="sb"> Submit </button>
+	  </form>
+	</div>
+	
+
+
+
+<script>
+
+//defining a function to validate form
+
+//const frm=document.forms[0];
+const frm=document.querySelector("#f1");
+
+frm.addEventListener("submit", checkData );
+ 
+function checkData(f)
+{
+  //fullname checking
+  const fn=document.querySelector("#fna").value.trim();
+  const fnexp=/^[a-zA-Z ]*$/ 
+  
+  if( fnexp.test(fn)===false || fn==="")
+  {
+	document.querySelector("#errfna").textContent=`plz enter a valid name`;
+	f.preventDefault();
+  }else
+	document.querySelector("#errfna").textContent=``;
+	
+  //phone checking
+  const p=document.querySelector("#ph").value;
+  const phexp=/^[6-9]\d{9}$/;
+  
+  if(phexp.test(p)===false)
+  {
+	document.querySelector("#errph").textContent=`plz enter a valid contact number`;
+	f.preventDefault();
+  }else
+    document.querySelector("#errph").textContent=``;
+  
+  //pincode checking
+  const pc=document.querySelector("#pin").value;
+  const pcexp=/^\d{6}$/;
+  
+  if(pcexp.test(pc)===false)
+  {
+	document.querySelector("#errpin").textContent=`plz enter 6digit code`;
+	f.preventDefault();
+  }else
+    document.querySelector("#errpin").textContent=``;  
+
+  //password checking
+  const pw=document.querySelector("#pwd").value;
+  const pwexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%*&]).{8,20}$/;
+  
+  if(pwexp.test(pw)===false)
+  {
+	document.querySelector("#errpwd").textContent=`password should contains 1 lower, upper, digit & symbol`;
+	f.preventDefault();
+  }else
+    document.querySelector("#errpwd").textContent=``;  	
+} //fun end
+
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!--destructuring  array and object supported 
+let x = a[0] , y=a[1] , z = a[2]
+let [x,y,z ] = a;
+
+[x,y,z] = [10 20 30] copy process
+
+ x = 10,
+ y= 20,
+ z = 30
+ 
+-->
+<script>
+const a = [10 , 20 ,30];
+let [x,y,z] =a;
+[x,y,z ] = [50,60,];
+document.write(`x ${x} <br> y ${y} <br> z  ${z}<br>`);
+</script>
+<h2>Mahesh Chaurasiya</h2>
+<script>
+//collbacks
+
+const arr = [45,67,34,98,64,23,100,500];
+for (let v of arr){
+document.write(`${v} <br>`);
+}
+</script>
+
+<h2>Second option is </h2>
+<script>
+//collbacks
+
+
+arr.forEach(e=>document.write(`${e} <br>`))
+</script>
+
+<h2>Second callback on sort-method </h2>
+<script>
+//collbacks
+
+arr.sort((a,b)=> a-b);
+arr.forEach(e=>document.write(`${e} <br>`))
+
+</script>

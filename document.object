@@ -1,0 +1,470 @@
+How to hide and show portion of a form page using javscript
+============================================================
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			<fieldset id="cur_id">
+			<legend>Current Address</legend>	
+			<table align="center">
+				<tr>
+					<td>Locality:</td>
+					<td><input type="text" id="t1"/></td>
+				</tr>
+				<tr>
+					<td>City:</td>
+					<td><input type="text" id="t2"/></td>
+				</tr>
+				<tr>
+					<td>State:</td>
+					<td><input type="text" id="t3"/></td>
+				</tr>
+			</table>
+			</fieldset>
+			<br>
+			<input type="checkbox" id="box" onclick="f1()" /> 
+			Current is same as permanent address?
+			<br><br>
+
+			<fieldset id="per_id">
+			<legend>Permanent Address</legend>	
+			<table align="center">
+				<tr>
+					<td>Locality:</td>
+					<td><input type="text" id="t1"/></td>
+				</tr>
+				<tr>
+					<td>City:</td>
+					<td><input type="text" id="t2"/></td>
+				</tr>
+				<tr>
+					<td>State:</td>
+					<td><input type="text" id="t3"/></td>
+				</tr>
+			</table>
+			</fieldset>
+
+			<script>
+				function f1()
+				{
+					if(document.getElementById('box').checked)
+					{
+					document.getElementById('per_id').style.display="none";
+					}
+					else
+					{
+					document.getElementById('per_id').style.display="block";	
+					}
+				}
+
+			</script>
+	</body>	
+</html>
+
+4) document.getElementsByName() 
+===============================
+It is used to select the elements based on specified name.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			Name:  <input type="text" name="t1"/> 
+			<button onclick="f1()"> submit </button>
+
+			<script>
+				function f1()
+				{
+					var name = document.getElementsByName('t1')[0].value;
+					document.writeln("Welcome :"+name);
+				}
+			</script>
+	</body>	
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			Name:  <input type="text" name="t1"/> 
+			<button onclick="f1()"> submit </button>
+
+			<script>
+				function f1()
+				{
+					var cnt = document.getElementsByName('t1').length;
+					document.writeln("Count :"+cnt);
+				}
+			</script>
+	</body>	
+</html>
+
+ex:
+--
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			Name:  <input type="text" name="t1"/> 
+			<button onclick="f1()"> submit </button>
+
+			<script>
+				function f1()
+				{
+					var name = document.getElementsByName('t1')[0].tagName;
+					document.writeln("Tag Name  :"+name);
+				}
+			</script>
+	</body>	
+</html>
+
+How to select multiple checkboxes using javscript
+-------------------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			Course Completed?
+			<br>	
+			<button onclick="f1()"> select all </button>
+			<br><br>
+			<input type="checkbox" name="t1" value="html"/> HTML <br>
+			<input type="checkbox" name="t1" value="css"/> CSS <br>
+			<input type="checkbox" name="t1" value="js"/> JavaScript <br> 
+			<script>
+				function f1()
+				{
+					var x = document.getElementsByName('t1');
+					for(var i=0;i<x.length;i++)
+					{
+						if(x[i].type=="checkbox")
+						{
+							x[i].checked=true;
+						}
+					}
+				}
+			</script> 
+	</body>	
+</html>
+
+
+5) document.getElementsByTagName()
+==================================
+It is used to select the elements based on specified tag name.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			Name: <input type="text"/>
+			<button onclick="f1()"> submit </button>
+			<script>
+				function f1()
+				{
+				var name = document.getElementsByTagName('input')[0].value;
+				document.writeln("Welcome :"+name);
+				}
+			</script>
+	</body>	
+</html>
+
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			Name: <input type="text"/>
+			<button onclick="f1()"> submit </button>
+			<script>
+				function f1()
+				{
+				var cnt = document.getElementsByTagName('input').length;
+				document.writeln("Count :"+cnt);
+				}
+			</script>
+	</body>	
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			<div> Division Tag1 </div>
+			<div> Division Tag2 </div>
+			<div> Division Tag3 </div>
+			<button onclick="f1()"> Flip </button>
+			<script>
+				function f1()
+				{
+					var x = document.getElementsByTagName('div');
+					x[0].innerHTML="HTML class";
+					x[1].innerHTML="CSS class";
+					x[2].innerHTML="JS class";
+
+					x[0].style.backgroundColor="cyan";	
+					x[1].style.color="blue";
+					x[2].style.textAlign="center";
+					x[2].style.color="blue";
+					x[2].style.backgroundColor="cyan";
+				}
+			</script>
+	</body>	
+</html>
+
+6) document.getElementsByClassName() 
+====================================
+It is used to select the elements based on specified class name.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			.mystyle
+			{
+				width:200px;
+				height:200px;
+				background-color:red;
+			}
+		</style>
+	</head>
+	<body>
+			<div class="mystyle"></div>
+			<button onclick="f1()"> click me </button>
+			<script>
+				function f1()
+				{
+			var len = document.getElementsByClassName('mystyle').length;
+			document.writeln(len);
+				}
+			</script>
+	</body>	
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			.mystyle
+			{
+				width:200px;
+				height:200px;
+				border:2px solid black;
+			}
+		</style>
+	</head>
+	<body>
+			<div class="mystyle"></div>
+			<button onclick="f1()"> click me </button>
+			<script>
+				function f1()
+				{
+					var x = document.getElementsByClassName('mystyle');
+					x[0].innerHTML="My Box";
+					x[0].style.color="blue";
+				}
+			</script>
+	</body>	
+</html>
+
+7) document.addEventListener()
+==============================
+It is used to add the event listener to HTML element in a DOM.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			<h2> Click Anywhere </h2>
+			<script>
+				document.addEventListener('click',function(){
+					alert("You have clicked");
+				})
+			</script>
+	</body>	
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			<h2 id="hover"> Mouse Over Here  </h2>
+			<script>
+				var x = document.getElementById('hover');
+				x.addEventListener('mouseover',function(){
+					alert("Mouse Is Over");
+					})
+			</script>
+	</body>	
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			<h2 id="hover"> Mouse Over Here  </h2>
+			<div id="result"></div>
+			<script>
+				var x = document.getElementById('hover');
+				x.addEventListener('mouseover',f1);
+
+				function f1()
+				{
+				document.getElementById('result').innerHTML="Mouse is Over";
+				}
+			</script>
+	</body>	
+</html>
+
+ex:
+--
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			<h2 id="hover"> Mouse Over Here  </h2>
+			<div id="result"></div>
+			<script>
+				var x = document.getElementById('hover');
+				x.addEventListener('mouseout',f1);
+
+				function f1()
+				{
+				document.getElementById('result').innerHTML="Mouse is Out";
+				}
+			</script>
+	</body>	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

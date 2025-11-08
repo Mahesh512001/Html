@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<title>Validation/varification</title>
+<style>
+label{
+	display:inline-block;
+	width:170px;
+	}
+.container{
+	background:black;
+	color:white;
+	width:40%;
+	padding:30px;
+	box-shadow: 0 0 20px grey;
+	border-radius:10px;
+}
+input{
+background:black;
+color:white;
+border:none;
+border-bottom: 2px solid white;
+outline:none;
+
+}
+div{
+ margin:20px;}
+ 
+.error-massage {
+
+font-size:6px;
+ background:white;
+ color:red;
+ padding:2px;
+ border-radius:5px;
+ box-shadow:0 0 3px white; 
+ 
+ }
+ 
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>example of the validation</h2>
+<form  id="submition-form" action="" method="post">
+
+<div><label for="fna"> Enter The Full Name: </labeL><input type="text" name="fna" id="fna"><span id="errfna" ></span></div>
+<div><label for="age"> Enter The age: </labeL><input type="text" name="age" id="age" ><span id="errage"></span></div>
+<div><label for="una"> Enter UserName: </labeL><input type="text" name="una" id="una"><span id="erruna"></span></div>
+<div><label for="ema"> Enter The Email: </labeL><input type="text" name="ema" id="ema"><span id="errema"></span></div>
+<div><label for="pwd"> Create Password : </labeL><input type="text" name="pwd" id="pwd"><span id="errpwd"></span></div>
+<div><label for="cpwd"> Re-enter the Password : </labeL><input type="text" name="cpwd" id="cnfpwd"><span id="errcpwd"></span></div>
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+<script>
+
+const frm = document.querySelector("#submition-form");
+
+frm.addEventListener("submit",showOtp );
+
+function showOtp(fma) {
+let fexp  = /^[A-Za-z]+(\s[A-Za-z])+$/;
+const fname =  document.querySelector("#fna").value.trim();
+const errFna = document.querySelector("#errfna");
+
+if(!fexp.test(fname)){
+	errFna.textContent = `Write the right format`;
+	errFna.classList.add("error-massage");
+	fma.preventDefault();
+	
+ }
+ else 
+	errFna.textContent = '';
+}
+
+</script>
+</body>
+</html>

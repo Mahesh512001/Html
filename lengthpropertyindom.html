@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			<label for="in">Name: </label><input id='in' type="text"/>
+			<button onclick="f1()"> submit </button>
+			<script>
+				function f1()
+				{
+				var cnt = document.getElementsByTagName('input').length;
+				document.writeln("Count :"+cnt);
+				}
+			</script>
+			
+			<div> Division tag 1</div>
+			<div> Division tag 2</div>
+			<div> Division tag 3</div>
+			
+			<button onclick="fn()"> Flip </button>
+			<script>
+			function fn(){
+	var x = document.getElementsByTagName('div');
+				x[0].innerHTML="HTML class";
+				x[1].innerHTML="CSS class";
+				x[2].innerHTML="JS class";
+				
+				
+				x[0].style.backgroundColor='cyan';
+				x[1].style.color='blue';
+				x[2].style.textAlign='center';
+				x[2].style.backgroundColor='cyan';
+				
+			}
+			</script>
+			
+			<div class="mystyle"></div>
+			<button onclick="f1()"> click me </button>
+			<script>
+				function f1()
+				{
+			var len = document.getElementsByClassName('mystyle').length;
+			document.writeln(len);
+				}
+			</script>
+			
+			
+	</body>	
+</html>

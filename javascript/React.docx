@@ -1,0 +1,110 @@
+
+React js
+
+requirement for learing about these technology
+html css javascript
+Bootstrap
+Tailwind CSS
+
+
+javscript Topics
+
+required for learn reactjs
+
+Variable 
+DataType
+Operators
+Statement
+Function
+	-function Declaration
+	-function expression
+	-function Signature
+	-function Defination
+	-function parameter
+	-function Operators
+	-function Generator
+	-Async Function
+	-Function Callback
+	-Function Promise
+	-Function Recursion
+	-Function Cosure
+	-pure and Impure Function
+	-Anonymous Function
+	-IIFE pattern
+	
+Javascript OOP
+		-class
+		-inheritance
+		
+Javascript Dom & Bom
+
+What is React?
+
+React have two major versions upto 18 is one type it's having one library 
+it's javscript library for builiding user Interface
+[upto 18x] React is javascript 
+
+we never use javascript for user interface
+before react library we use jquery  for create any ui
+
+it's a javascript library for web and native UI(mobile/android) [from 19x]
+
+next.js remex remedy 
+
+Can we build application using React?
+yes with support of framework like Next js.
+
+What is difference between React & Angular
+
+react is a library. can build UI but can not controll the application flow.
+
+angular is a framework. we can build full application and we can controll the application flow.
+
+why we need React like library?
+
+to build spa & pwa
+
+
+
+what are the mejor challenges in modern web Development?
+-1.Unified User Experience(across any device)
+-2.Fluid Ux there will be (azax in javascript-topic)
+-3.modular (your required less but you import lotof its bad)
+-4.Loosely Coupled & Extensible
+
+
+
+example:-
+{
+<script type="module">
+import{f2} from "..............."
+---------.innerhtml = f2();
+</script>
+}
+
+
+ex
+
+youtube =====>optimize===-->
+								low-bandwidth
+								mobile(browser)
+
+pc(browser)			
+
+
+what is solution?
+
+better to build single-page-application & progressive web application you feel app inside the browser website
+
+how to build spa
+
+-javascript & jquery we can build sp-application
+
+what are issues with js & jquery
+
+lot of Dom interaction.
+lot of dom manipulation.
+lot of Bom interactions.
+lot of code .
+
+what are the Features of React?

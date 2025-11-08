@@ -1,0 +1,61 @@
+<!--eventusing javascript with setTimeout ;-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+	/* Add your styles here */
+div{
+  width:400px;
+  height:300px;
+  margin:auto;
+  margin:50px;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid ;
+}
+h2{
+margin:135px;
+font-size:40px;
+font-stretch:20px;
+}
+
+	</style>
+  
+  </head>
+
+  <body>
+   <div id="container">
+     <h2 id="name">Mahesh</h2>
+   </div>
+   <button id="start">Start</button>
+     <button id="stop">Stop</button>
+
+     <script>
+	 // Add your code here
+
+
+let dbo = document.querySelector('#container').style;
+let str = document.getElementById("start");
+let stp = document.getElementById("stop");
+let res;
+str.addEventListener('click' , () =>{
+ res = setInterval(function(){
+  let n = Math.random()*1000000|0;
+dbo.background=`${"#"+n}`;
+  let m = Math.random()*1000000|0;
+dbo.boxShadow=` 0 0  20px ${"#"+m}`;
+  let t = Math.random()*1000000|0;
+  document.getElementById('name').style.color = `${'#'+t}`;
+},100);
+
+});
+
+stp.addEventListener('click',() => {
+  clearInterval(res);
+});
+
+
+	 </script>
+  </body>
+</html>
